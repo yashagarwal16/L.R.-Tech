@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: studyspark
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false

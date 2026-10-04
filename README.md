@@ -135,9 +135,10 @@ AI assistant.
 
 ## Deploying
 
-Deploy the frontend and Express API with the same domains/configuration
-principles as any Vite and Node service. Set `CORS_ORIGIN` to the frontend
-origin, configure `MONGODB_URI`, notification credentials, and the Vapi
-webhook URL/secret on the API host. For a separately hosted frontend, set
+The frontend and Express API can be deployed together as a Docker container
+to Render, AWS App Runner, or Azure Container Apps. See
+[DEPLOYING.md](./DEPLOYING.md) for provider-specific setup. Configure
+`MONGODB_URI`, notification credentials, and the Vapi webhook URL/secret as
+server-side environment variables. When hosting the frontend separately, set
 `VITE_LEAD_FORM_ENDPOINT` and `VITE_CHATBOT_API_ENDPOINT` to the API's public
 endpoints before building.
